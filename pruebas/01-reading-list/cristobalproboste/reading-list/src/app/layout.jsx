@@ -11,11 +11,12 @@ export const metadata = {
   title: "Reading List",
   description: "Prueba tecnica de Frontend Developer",
 };
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} bg-gradient-to-r from-yellow-100 to-amber-300`}
+        className={`${poppins.className} bg-gradient-to-r from-sky-100 to-blue-300`}
       >
         {children}
       </body>

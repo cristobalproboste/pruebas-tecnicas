@@ -1,17 +1,19 @@
-import booksData from '../../../../../../01-reading-list/books.json';
+import booksData from "../../../../../../01-reading-list/books.json";
+
 const getBooks = () => {
   const { library } = booksData;
-  return library;
+  return [...library];
 };
 
-const getBookByISBN = (ISBN) => {
+const getGenres = () => {
   const { library } = booksData;
-  return library.find(({ book }) => book.ISBN === ISBN);
+  library.map(({ book }) => book.genre);
+  return [...new Set(library.map(({ book }) => book.genre))];
 };
 
 const booksService = {
   getBooks,
-  getBookByISBN,
+  getGenres,
 };
 
 export default booksService;
